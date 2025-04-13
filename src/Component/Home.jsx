@@ -1,5 +1,5 @@
 import React from "react";
-import img1 from "./ojanup_niwas_20211211_0.png";
+import img1 from "./ojanup_niwas.png";
 
 function Home() {
   return (

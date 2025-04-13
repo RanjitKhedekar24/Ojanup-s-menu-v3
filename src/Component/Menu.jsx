@@ -1,5 +1,5 @@
 import React from "react";
-import img1 from "./ojanup_niwas_20211211_0.png";
+import img1 from "./ojanup_niwas.png";
 import paplet from "../assets/papletThali.jpg";
 import paplet2 from "../assets/paplet.jpg";
 import fish from "../assets/fish.jpg";
