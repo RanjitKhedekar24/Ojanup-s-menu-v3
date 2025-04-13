@@ -23,7 +23,7 @@ function Gallery() {
           <img
             src={img1}
             alt="Ojanup Nivass"
-            className="rounded-xl shadow-xl transition-transform duration-500 hover:scale-105"
+            className="rounded-xl shadow-xl transition-transform duration-500"
           />
         </div>
       </div>
