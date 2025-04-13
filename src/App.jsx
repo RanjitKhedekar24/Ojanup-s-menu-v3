@@ -4,13 +4,15 @@ import Home from "./Component/Home";
 import Contact from "./Component/Contact";
 import Menu from "./Component/Menu";
 import Gallery from "./Component/Gallery";
-import { HashRouter, Routes, Route } from "react-router-dom";  // ⬅️ Changed
+import { HashRouter, Routes, Route } from "react-router-dom"; 
+import HamburgerMenu from "./Component/HamburgerMenu";
 
 function App() {
   return (
     <>
       <HashRouter> {/* ⬅️ Changed */}
         <Navbar />
+        <HamburgerMenu />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
