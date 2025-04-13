@@ -4,12 +4,12 @@ import Home from "./Component/Home";
 import Contact from "./Component/Contact";
 import Menu from "./Component/Menu";
 import Gallery from "./Component/Gallery";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";  // ⬅️ Changed
 
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter> {/* ⬅️ Changed */}
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -17,7 +17,7 @@ function App() {
           <Route path="/menu" element={<Menu />} />
           <Route path="/Gallery" element={<Gallery />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
