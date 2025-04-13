@@ -1,10 +1,19 @@
 import React from "react";
 import img1 from "./ojanup_niwas.png";
-import paplet from "../assets/papletThali.jpg";
-import paplet2 from "../assets/paplet.jpg";
 import fish from "../assets/fish.jpg";
-import modak from "../assets/modak.jpg";
+import fish2 from "../assets/fish2.jpg";
 import ghavan from "../assets/ghavan.jpg";
+import mandeli from "../assets/mandeli.png";
+import modak from "../assets/modak.jpg";
+import paplet2 from "../assets/paplet.jpg";
+import papletfry from "../assets/papletfry.png";
+import paplet from "../assets/papletThali.jpg";
+import papletthali1 from "../assets/papletthali1.png";
+import pronce from "../assets/pronce.png";
+import proncemasala from "../assets/proncemasala.png";
+import proncethali from "../assets/proncethali.png";
+import surmaifry from "../assets/surmaifry.png";
+import surmaithali from "../assets/surmaithali.png";
 
 function Gallery() {
   const images = [
@@ -12,7 +21,16 @@ function Gallery() {
     { src: paplet2, alt: "Paplet Fry" },
     { src: modak, alt: "Modak" },
     { src: fish, alt: "Fried Fish" },
+    { src: fish2, alt: "Fish" },
     { src: ghavan, alt: "Ghavan Chutney" },
+    { src: mandeli, alt: "Mandeli fry" },
+    { src: surmaithali, alt: "Surmai thali" },
+    { src: papletfry, alt: "Paplet fry" },
+    { src: papletthali1, alt: "Paplet thali" },
+    { src: pronce, alt: "Pronce fry" },
+    { src: proncemasala, alt: "Pronce masala" },
+    { src: proncethali, alt: "Pronce Thali" },
+    { src: surmaifry, alt: "Surmai fry" },
   ];
 
   return (
