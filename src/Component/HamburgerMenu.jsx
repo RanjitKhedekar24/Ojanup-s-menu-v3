@@ -25,38 +25,47 @@ const HamburgerMenu = () => {
 
   return (
     <div className="relative md:hidden" ref={menuRef}>
+      {/* Blur Background */}
+      {isOpen && (
+        <div className="fixed inset-0 bg-black/20 backdrop-blur-sm z-10" />
+      )}
+
       <button
-        className="flex items-center justify-center w-10 h-10 focus:outline-none transition-transform duration-200 hover:scale-110 pt-1"
+        className="fixed top-4 right-4 z-20 flex items-center justify-center w-10 h-10 focus:outline-none transition-all duration-300 hover:scale-110 pt-1"
         onClick={toggleMenu}
         aria-expanded={isOpen}
         aria-label="Toggle menu"
       >
         <GiHamburgerMenu
-          className="text-gray-800 transition-colors duration-200 hover:text-gray-600"
+          className={`text-gray-800 transition-all duration-300 ${
+            isOpen ? 'rotate-90' : 'rotate-0'
+          }`}
           size={24}
         />
       </button>
 
       {/* Mobile menu with animation */}
       <nav
-        className={`absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg md:hidden transform transition-all duration-200 ${
-          isOpen
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 -translate-y-2 pointer-events-none"
+        className={`fixed top-0 right-0 h-[300px] w-64 bg-white shadow-lg z-20 transform transition-all duration-300 ease-in-out rounded-bl-2xl ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <ul className="flex flex-col">
+        <ul className="flex flex-col pt-16">
           {["/", "/contact", "/menu", "/gallery"].map((path, index) => (
             <li
               key={path}
               className="hover:bg-gray-100 transition-colors duration-200"
               style={{
                 opacity: isOpen ? 1 : 0,
-                transform: `translateX(${isOpen ? 0 : -20}px)`,
-                transition: `all 200ms ${index * 50}ms`,
+                transform: `translateX(${isOpen ? 0 : 20}px)`,
+                transition: `all 300ms ${index * 100}ms`,
               }}
             >
-              <Link to={path} className="block px-4 py-2 text-gray-800">
+              <Link 
+                to={path} 
+                className="block px-6 py-2.5 text-gray-800 hover:text-rose-600 transition-colors duration-200"
+                onClick={() => setIsOpen(false)}
+              >
                 {path === "/"
                   ? "Home"
                   : path === "/contact"

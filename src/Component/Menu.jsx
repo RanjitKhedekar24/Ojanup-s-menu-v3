@@ -28,24 +28,36 @@ function Menu() {
             className="object-cover w-full h-full"
           />
         </div>
+        {/* नाष्टा */}
         <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow">
           <h2 className="text-center text-xl font-bold text-rose-600 mb-4 border-b pb-2">
             नाष्टा
           </h2>
-          <ul className="space-y-1 text-gray-800 font-medium">
-            <li>पोहे - ₹40</li>
-            <li>चहा - ₹20</li>
-            <li>शीरा - ₹40</li>
-            <li>कॉफी - ₹25</li>
-            <li>उपमा - ₹40</li>
-            <li>बुर्जी चपाती - ₹80</li>
-            <li>फिंगर चिप्स - ₹60</li>
-            <li>मसाला पापड़ - ₹40</li>
-            <li>थालीपीठ प्लेट - ₹60</li>
-            <li>आमलेट चपाती - ₹70</li>
-          </ul>
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <tbody>
+                {[
+                  ["पोहे", "₹40"],
+                  ["चहा", "₹20"],
+                  ["शीरा", "₹40"],
+                  ["कॉफी", "₹25"],
+                  ["उपमा", "₹40"],
+                  ["बुर्जी चपाती", "₹80"],
+                  ["फिंगर चिप्स", "₹60"],
+                  ["मसाला पापड़", "₹40"],
+                  ["थालीपीठ प्लेट", "₹60"],
+                  ["ऑम्लेट चपाती", "₹70"],
+                ].map(([item, price], index) => (
+                  <tr key={index} className="border-b border-gray-100 last:border-0">
+                    <td className="py-2 text-gray-800 font-medium">{item}</td>
+                    <td className="py-2 text-right text-gray-800 font-medium">{price}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
-
+        
         {/* जेवण */}
         <div className="md:h-[40%] md:w-[40%] rounded overflow-hidden shadow-lg flex items-center justify-center mx-auto bg-white">
           <img
@@ -59,30 +71,43 @@ function Menu() {
           <h2 className="text-center text-xl font-bold text-rose-600 mb-4 border-b pb-2">
             जेवण
           </h2>
-          <ul className="space-y-1 text-gray-800 font-medium">
-            <li>चपाती- ₹15</li>
-            <li>पापड - ₹10</li>
-            <li>भाकरी - ₹20</li>
-            <li>दाल फ्राय - ₹120</li>
-            <li>व्हेज थाळी - ₹170</li>
-            <li>जीरा राईस - ₹120</li>
-            <li>अंडा थाळी - ₹180</li>
-            <li>दाल तडका - ₹150</li>
-            <li>चिकन फ्राय - ₹200</li>
-            <li>बांगडा फ्राय - ₹150</li>
-            <li>चिकन थाळी - ₹250</li>
-            <li>बांगडा थाळी - ₹250</li>
-            <li>कोळंबी फ्राय - ₹300</li>
-            <li>चिकन सुक्का - ₹200</li>
-            <li>कोळंबी थाळी - ₹400</li>
-            <li>कोलिम भाकरी - ₹100</li>
-            <li>कोळंबी मसाला - ₹350</li>
-            <li>सुरमई फ्राय (साईज नुसार)</li>
-            <li>पापलेट फ्राय (साईज नुसार)</li>
-            <li>सुरमई थाळी (साईज नुसार)</li>
-            <li>पॉपलेट थाळी (साईज नुसार)</li>
-          </ul>
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <tbody>
+                {[
+                  ["चपाती", "₹15"],
+                  ["पापड", "₹10"],
+                  ["भाकरी", "₹20"],
+                  ["दाल फ्राय", "₹120"],
+                  ["व्हेज थाळी", "₹170"],
+                  ["जीरा राईस", "₹120"],
+                  ["अंडा थाळी", "₹180"],
+                  ["दाल तडका", "₹150"],
+                  ["चिकन फ्राय", "₹200"],
+                  ["बांगडा फ्राय", "₹150"],
+                  ["चिकन थाळी", "₹250"],
+                  ["बांगडा थाळी", "₹250"],
+                  ["कोळंबी फ्राय", "₹300"],
+                  ["चिकन सुक्का", "₹200"],
+                  ["कोळंबी थाळी", "₹400"],
+                  ["कोलिम भाकरी", "₹100"],
+                  ["कोळंबी मसाला", "₹350"],
+                  ["सुरमई फ्राय", "(साईज नुसार)"],
+                  ["पापलेट फ्राय", "(साईज नुसार)"],
+                  ["सुरमई थाळी", "(साईज नुसार)"],
+                  ["पॉपलेट थाळी", "(साईज नुसार)"],
+                ].map(([item, price], index) => (
+                  <tr key={index} className="border-b border-gray-100 last:border-0">
+                    <td className="py-2 text-gray-800 font-medium">{item}</td>
+                    <td className="py-2 text-right text-gray-800 font-medium">{price}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
+
+        {/* पेय व गोड */}
         <div className="md:h-[40%] md:w-[40%] rounded overflow-hidden shadow-lg flex items-center justify-center mx-auto bg-white">
           <img
             src={paplet2}
@@ -114,15 +139,26 @@ function Menu() {
           <h2 className="text-center text-xl font-bold text-rose-600 mb-4 border-b pb-2">
             ऑर्डर प्रमाणे
           </h2>
-          <ul className="space-y-1 text-gray-800 font-medium">
-            <li>मोदक - ₹40</li>
-            <li>कांदा भजी - ₹80</li>
-            <li>बटाटा भजी - ₹50</li>
-            <li>घावण चटणी - ₹60</li>
-            <li>चिकन बिर्याणी / भात</li>
-            <li>कोळंबी बिर्याणी / भात</li>
-            <li>साबुदाणा खिचडी - ₹80</li>
-          </ul>
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <tbody>
+                {[
+                  ["मोदक", "₹40"],
+                  ["कांदा भजी", "₹80"],
+                  ["बटाटा भजी", "₹50"],
+                  ["घावण चटणी", "₹60"],
+                  ["चिकन बिर्याणी / भात", "-"],
+                  ["कोळंबी बिर्याणी / भात", "-"],
+                  ["साबुदाणा खिचडी", "₹80"],
+                ].map(([item, price], index) => (
+                  <tr key={index} className="border-b border-gray-100 last:border-0">
+                    <td className="py-2 text-gray-800 font-medium">{item}</td>
+                    <td className="py-2 text-right text-gray-800 font-medium">{price}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
 
         {/* Special Item */}
