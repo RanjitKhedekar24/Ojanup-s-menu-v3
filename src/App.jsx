@@ -7,6 +7,7 @@ import Gallery from "./Component/Gallery";
 import { HashRouter, Routes, Route } from "react-router-dom"; 
 import HamburgerMenu from "./Component/HamburgerMenu";
 
+
 function App() {
   return (
     <>
